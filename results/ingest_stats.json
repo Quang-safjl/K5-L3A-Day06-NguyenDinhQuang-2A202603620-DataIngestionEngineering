@@ -1,0 +1,54 @@
+{
+  "A": {
+    "strategy": "A",
+    "params": {
+      "chunker": "fixed",
+      "size": 500,
+      "overlap": 50,
+      "collection": "godot_A",
+      "use_filter": false
+    },
+    "chunks": 716,
+    "chars_total": 351150,
+    "length_chars": {
+      "min": 80,
+      "p25": 500,
+      "median": 500.0,
+      "mean": 490.4,
+      "p90": 500,
+      "max": 500
+    },
+    "tokens_total": 85669,
+    "ingest_seconds_full": 1603.32,
+    "ingest_run_at": "2026-11-13T11:12:47+00:00"
+  },
+  "B": {
+    "strategy": "B",
+    "params": {
+      "chunker": "heading",
+      "max_size": 1200,
+      "min_section": 150,
+      "collection": "godot_B",
+      "use_filter": false
+    },
+    "chunks": 431,
+    "chars_total": 320599,
+    "length_chars": {
+      "min": 90,
+      "p25": 451,
+      "median": 755,
+      "mean": 743.8,
+      "p90": 1144,
+      "max": 1236
+    },
+    "tokens_total": 77295,
+    "ingest_seconds_full": 1541.94,
+    "ingest_run_at": "2026-11-13T11:38:29+00:00"
+  },
+  "C": {
+    "strategy": "C",
+    "note": "C dùng lại index của B; chỉ khác filter khi truy xuất.",
+    "chunks": 431,
+    "ingest_seconds_full": 0
+  }
+}

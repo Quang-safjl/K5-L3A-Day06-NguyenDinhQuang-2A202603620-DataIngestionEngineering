@@ -1,0 +1,94 @@
+{
+  "A|dev": {
+    "strategy": "A",
+    "split": "dev",
+    "N": 15,
+    "hit1": 8,
+    "hit3": 9,
+    "source_hit1": 13,
+    "source_hit3": 14,
+    "evidence_split_suspects": [
+      "q07",
+      "q08",
+      "q13",
+      "q14",
+      "q15"
+    ],
+    "failed_hit3": [
+      "q01",
+      "q07",
+      "q08",
+      "q13",
+      "q14",
+      "q15"
+    ]
+  },
+  "A|dev/filter-only": {
+    "strategy": "A",
+    "split": "dev/filter-only",
+    "N": 3,
+    "hit1": 2,
+    "hit3": 2,
+    "source_hit1": 2,
+    "source_hit3": 2,
+    "evidence_split_suspects": [],
+    "failed_hit3": [
+      "q01"
+    ]
+  },
+  "B|dev": {
+    "strategy": "B",
+    "split": "dev",
+    "N": 15,
+    "hit1": 11,
+    "hit3": 13,
+    "source_hit1": 13,
+    "source_hit3": 14,
+    "evidence_split_suspects": [
+      "q14"
+    ],
+    "failed_hit3": [
+      "q01",
+      "q14"
+    ]
+  },
+  "B|dev/filter-only": {
+    "strategy": "B",
+    "split": "dev/filter-only",
+    "N": 3,
+    "hit1": 2,
+    "hit3": 2,
+    "source_hit1": 2,
+    "source_hit3": 2,
+    "evidence_split_suspects": [],
+    "failed_hit3": [
+      "q01"
+    ]
+  },
+  "C|dev": {
+    "strategy": "C",
+    "split": "dev",
+    "N": 15,
+    "hit1": 11,
+    "hit3": 14,
+    "source_hit1": 14,
+    "source_hit3": 15,
+    "evidence_split_suspects": [
+      "q14"
+    ],
+    "failed_hit3": [
+      "q14"
+    ]
+  },
+  "C|dev/filter-only": {
+    "strategy": "C",
+    "split": "dev/filter-only",
+    "N": 3,
+    "hit1": 2,
+    "hit3": 3,
+    "source_hit1": 3,
+    "source_hit3": 3,
+    "evidence_split_suspects": [],
+    "failed_hit3": []
+  }
+}
