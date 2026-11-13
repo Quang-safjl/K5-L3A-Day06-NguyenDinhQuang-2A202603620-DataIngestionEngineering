@@ -4,7 +4,7 @@ Chốt trước khi chạy `evaluate --split test`. Commit file này trước kh
 
 ## Thời điểm chốt
 - Thời điểm (UTC+7): 2026-11-13 18:50   
-- Commit hash lúc chốt: 2026-11-13-19:00
+- Commit hash lúc chốt: da566f1
 
 ## Cách chia dev/test
 - Chia theo tài liệu nguồn: 15 câu dev dùng 9 tài liệu gold, 5 câu test dùng 5 tài liệu gold khác. Không tài liệu gold nào xuất hiện ở cả hai tập.
