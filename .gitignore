@@ -8,3 +8,9 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+# Day 06: vector store (sinh lại bằng: python -m src.run ingest)
+data/chroma/
+
+# File tạm / file gửi đi
+corpus_upload.zip
+starter/check_model.py

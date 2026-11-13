@@ -1,0 +1,87 @@
+path,status,reason,chars
+tutorials/2d/2d_antialiasing.rst,included,ok,3355
+tutorials/2d/2d_lights_and_shadows.rst,included,ok,16122
+tutorials/2d/2d_meshes.rst,included,ok,1952
+tutorials/2d/2d_movement.rst,included,ok,6567
+tutorials/2d/2d_parallax.rst,included,ok,9590
+tutorials/2d/2d_sprite_animation.rst,included,ok,7610
+tutorials/2d/2d_transforms.rst,excluded,vượt --per-dir=6,4115
+tutorials/2d/canvas_layers.rst,excluded,vượt --per-dir=6,2684
+tutorials/2d/custom_drawing_in_2d.rst,excluded,vượt --per-dir=6,27627
+tutorials/2d/index.rst,excluded,index/toctree file,0
+tutorials/2d/introduction_to_2d.rst,excluded,vượt --per-dir=6,15620
+tutorials/2d/particle_process_material_2d.rst,excluded,vượt --per-dir=6,7161
+tutorials/2d/particle_systems_2d.rst,excluded,vượt --per-dir=6,9268
+tutorials/2d/using_tilemaps.rst,excluded,vượt --per-dir=6,14489
+tutorials/2d/using_tilesets.rst,excluded,vượt --per-dir=6,20079
+tutorials/3d/3d_antialiasing.rst,included,ok,13088
+tutorials/3d/3d_rendering_limitations.rst,included,ok,6217
+tutorials/3d/3d_text.rst,included,ok,6664
+tutorials/3d/csg_tools.rst,included,ok,10839
+tutorials/3d/environment_and_post_processing.rst,included,ok,41509
+tutorials/3d/high_dynamic_range.rst,included,ok,4915
+tutorials/3d/index.rst,excluded,index/toctree file,0
+tutorials/3d/introduction_to_3d.rst,excluded,vượt --per-dir=6,16624
+tutorials/3d/lights_and_shadows.rst,excluded,vượt --per-dir=6,31249
+tutorials/3d/mesh_lod.rst,excluded,vượt --per-dir=6,7152
+tutorials/3d/occlusion_culling.rst,excluded,vượt --per-dir=6,12152
+tutorials/3d/physical_light_and_camera_units.rst,excluded,vượt --per-dir=6,12106
+tutorials/3d/resolution_scaling.rst,excluded,vượt --per-dir=6,9403
+tutorials/3d/spring_arm.rst,excluded,vượt --per-dir=6,3881
+tutorials/3d/standard_material_3d.rst,excluded,vượt --per-dir=6,30981
+tutorials/3d/using_decals.rst,excluded,vượt --per-dir=6,11457
+tutorials/3d/using_gridmaps.rst,excluded,vượt --per-dir=6,8179
+tutorials/3d/using_multi_mesh_instance.rst,excluded,vượt --per-dir=6,2803
+tutorials/3d/using_trail_3d.rst,excluded,vượt --per-dir=6,7920
+tutorials/3d/using_transforms.rst,excluded,vượt --per-dir=6,14850
+tutorials/3d/variable_rate_shading.rst,excluded,vượt --per-dir=6,6771
+tutorials/3d/visibility_ranges.rst,excluded,vượt --per-dir=6,11015
+tutorials/3d/volumetric_fog.rst,excluded,vượt --per-dir=6,13991
+tutorials/physics/collision_shapes_2d.rst,included,ok,6414
+tutorials/physics/collision_shapes_3d.rst,included,ok,5756
+tutorials/physics/index.rst,excluded,index/toctree file,0
+tutorials/physics/kinematic_character_2d.rst,included,ok,6722
+tutorials/physics/large_world_coordinates.rst,included,ok,10977
+tutorials/physics/physics_introduction.rst,included,ok,17465
+tutorials/physics/ragdoll_system.rst,included,ok,8823
+tutorials/physics/ray-casting.rst,excluded,vượt --per-dir=6,8463
+tutorials/physics/rigid_body.rst,excluded,vượt --per-dir=6,4194
+tutorials/physics/soft_body.rst,excluded,vượt --per-dir=6,6045
+tutorials/physics/troubleshooting_physics_issues.rst,excluded,vượt --per-dir=6,9964
+tutorials/physics/using_area_2d.rst,excluded,vượt --per-dir=6,4721
+tutorials/physics/using_character_body_2d.rst,excluded,vượt --per-dir=6,15980
+tutorials/physics/using_jolt_physics.rst,excluded,vượt --per-dir=6,12658
+tutorials/scripting/change_scenes_manually.rst,included,ok,4890
+tutorials/scripting/creating_script_templates.rst,included,ok,6913
+tutorials/scripting/cross_language_scripting.rst,included,ok,6559
+tutorials/scripting/evaluating_expressions.rst,included,ok,6557
+tutorials/scripting/filesystem.rst,included,ok,4259
+tutorials/scripting/groups.rst,included,ok,3582
+tutorials/scripting/how_to_read_the_godot_api.rst,excluded,vượt --per-dir=6,4526
+tutorials/scripting/idle_and_physics_processing.rst,excluded,vượt --per-dir=6,2940
+tutorials/scripting/index.rst,excluded,index/toctree file,0
+tutorials/scripting/instancing_with_signals.rst,excluded,vượt --per-dir=6,4327
+tutorials/scripting/logging.rst,excluded,vượt --per-dir=6,11835
+tutorials/scripting/nodes_and_scene_instances.rst,excluded,vượt --per-dir=6,5317
+tutorials/scripting/other_languages.rst,excluded,quá ngắn (674 < 1500),674
+tutorials/scripting/overridable_functions.rst,excluded,vượt --per-dir=6,3921
+tutorials/scripting/pausing_games.rst,excluded,vượt --per-dir=6,3893
+tutorials/scripting/resources.rst,excluded,vượt --per-dir=6,12498
+tutorials/scripting/scene_tree.rst,excluded,vượt --per-dir=6,6210
+tutorials/scripting/scene_unique_nodes.rst,excluded,vượt --per-dir=6,3326
+tutorials/scripting/singletons_autoload.rst,excluded,vượt --per-dir=6,8836
+tutorials/inputs/controller_features.rst,included,ok,10249
+tutorials/inputs/controllers_gamepads_joysticks.rst,included,ok,14175
+tutorials/inputs/custom_mouse_cursor.rst,included,ok,2605
+tutorials/inputs/handling_quit_requests.rst,included,ok,2872
+tutorials/inputs/index.rst,excluded,index/toctree file,0
+tutorials/inputs/input_examples.rst,included,ok,9892
+tutorials/inputs/inputevent.rst,included,ok,9804
+tutorials/inputs/mouse_and_input_coordinates.rst,excluded,vượt --per-dir=6,2059
+getting_started/step_by_step/index.rst,excluded,index/toctree file,0
+getting_started/step_by_step/instancing.rst,included,ok,8591
+getting_started/step_by_step/nodes_and_scenes.rst,included,ok,6305
+getting_started/step_by_step/scripting_first_script.rst,included,ok,9373
+getting_started/step_by_step/scripting_languages.rst,included,ok,5930
+getting_started/step_by_step/scripting_player_input.rst,included,ok,6037
+getting_started/step_by_step/signals.rst,included,ok,13972

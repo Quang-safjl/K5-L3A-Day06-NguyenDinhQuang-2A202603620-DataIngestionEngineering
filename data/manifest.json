@@ -1,0 +1,598 @@
+{
+  "corpus": "Godot Engine documentation (godot-docs, .rst)",
+  "snapshot": {
+    "repo": "https://github.com/godotengine/godot-docs.git",
+    "branch": "master",
+    "commit": "c5b3485cb4b6e14ae3d8a45271bcddac7caad66a",
+    "commit_date": "2026-11-11T19:09:59-05:00"
+  },
+  "license": "CC BY 3.0 (trừ classes/; classes/ không dùng)",
+  "attribution": "Juan Linietsky, Ariel Manzur and the Godot community",
+  "selection_rule": "dirs=['tutorials/2d', 'tutorials/3d', 'tutorials/physics', 'tutorials/scripting', 'tutorials/inputs', 'getting_started/step_by_step']; sắp xếp theo đường dẫn; tối đa 6/thư mục; loại index.rst, file '_*', file < 1500 ký tự",
+  "page_counting_rule": "RST không phân trang: 1 file .rst hợp lệ = 1 đơn vị nguồn độc lập (page = source_id), >= 1500 ký tự đã chuẩn hóa; không nhân bản.",
+  "metadata_fields": {
+    "category": "thư mục cấp 1 (từ đường dẫn)",
+    "topic": "thư mục cấp 2 (từ đường dẫn)",
+    "section": "heading gần nhất (từ nội dung)"
+  },
+  "total_units": 36,
+  "total_chars": 317150,
+  "sources": [
+    {
+      "source_id": "tutorials--2d--2d_antialiasing",
+      "title": "2D antialiasing",
+      "source_path": "tutorials/2d/2d_antialiasing.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_antialiasing.rst",
+      "source_path_or_url": "tutorials/2d/2d_antialiasing.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_antialiasing"
+      ],
+      "char_count": 3355,
+      "heading_count": 4,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--2d--2d_lights_and_shadows",
+      "title": "2D lights and shadows",
+      "source_path": "tutorials/2d/2d_lights_and_shadows.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_lights_and_shadows.rst",
+      "source_path_or_url": "tutorials/2d/2d_lights_and_shadows.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_lights_and_shadows"
+      ],
+      "char_count": 16122,
+      "heading_count": 11,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--2d--2d_meshes",
+      "title": "2D meshes",
+      "source_path": "tutorials/2d/2d_meshes.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_meshes.rst",
+      "source_path_or_url": "tutorials/2d/2d_meshes.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_meshes"
+      ],
+      "char_count": 1952,
+      "heading_count": 4,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--2d--2d_movement",
+      "title": "2D movement overview",
+      "source_path": "tutorials/2d/2d_movement.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_movement.rst",
+      "source_path_or_url": "tutorials/2d/2d_movement.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_movement"
+      ],
+      "char_count": 6567,
+      "heading_count": 10,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--2d--2d_parallax",
+      "title": "2D Parallax",
+      "source_path": "tutorials/2d/2d_parallax.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_parallax.rst",
+      "source_path_or_url": "tutorials/2d/2d_parallax.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_parallax"
+      ],
+      "char_count": 9590,
+      "heading_count": 16,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--2d--2d_sprite_animation",
+      "title": "2D sprite animation",
+      "source_path": "tutorials/2d/2d_sprite_animation.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/2d/2d_sprite_animation.rst",
+      "source_path_or_url": "tutorials/2d/2d_sprite_animation.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--2d--2d_sprite_animation"
+      ],
+      "char_count": 7610,
+      "heading_count": 8,
+      "category": "tutorials",
+      "topic": "2d"
+    },
+    {
+      "source_id": "tutorials--3d--3d_antialiasing",
+      "title": "3D antialiasing",
+      "source_path": "tutorials/3d/3d_antialiasing.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/3d_antialiasing.rst",
+      "source_path_or_url": "tutorials/3d/3d_antialiasing.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--3d_antialiasing"
+      ],
+      "char_count": 13088,
+      "heading_count": 12,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--3d--3d_rendering_limitations",
+      "title": "3D rendering limitations",
+      "source_path": "tutorials/3d/3d_rendering_limitations.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/3d_rendering_limitations.rst",
+      "source_path_or_url": "tutorials/3d/3d_rendering_limitations.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--3d_rendering_limitations"
+      ],
+      "char_count": 6217,
+      "heading_count": 6,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--3d--3d_text",
+      "title": "3D text",
+      "source_path": "tutorials/3d/3d_text.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/3d_text.rst",
+      "source_path_or_url": "tutorials/3d/3d_text.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--3d_text"
+      ],
+      "char_count": 6664,
+      "heading_count": 12,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--3d--csg_tools",
+      "title": "Prototyping levels with CSG",
+      "source_path": "tutorials/3d/csg_tools.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/csg_tools.rst",
+      "source_path_or_url": "tutorials/3d/csg_tools.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--csg_tools"
+      ],
+      "char_count": 10839,
+      "heading_count": 12,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--3d--environment_and_post_processing",
+      "title": "Environment and post-processing",
+      "source_path": "tutorials/3d/environment_and_post_processing.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/environment_and_post_processing.rst",
+      "source_path_or_url": "tutorials/3d/environment_and_post_processing.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--environment_and_post_processing"
+      ],
+      "char_count": 41509,
+      "heading_count": 28,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--3d--high_dynamic_range",
+      "title": "High dynamic range lighting",
+      "source_path": "tutorials/3d/high_dynamic_range.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/3d/high_dynamic_range.rst",
+      "source_path_or_url": "tutorials/3d/high_dynamic_range.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--3d--high_dynamic_range"
+      ],
+      "char_count": 4915,
+      "heading_count": 8,
+      "category": "tutorials",
+      "topic": "3d"
+    },
+    {
+      "source_id": "tutorials--physics--collision_shapes_2d",
+      "title": "Collision shapes (2D)",
+      "source_path": "tutorials/physics/collision_shapes_2d.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/collision_shapes_2d.rst",
+      "source_path_or_url": "tutorials/physics/collision_shapes_2d.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--collision_shapes_2d"
+      ],
+      "char_count": 6414,
+      "heading_count": 7,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--physics--collision_shapes_3d",
+      "title": "Collision shapes (3D)",
+      "source_path": "tutorials/physics/collision_shapes_3d.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/collision_shapes_3d.rst",
+      "source_path_or_url": "tutorials/physics/collision_shapes_3d.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--collision_shapes_3d"
+      ],
+      "char_count": 5756,
+      "heading_count": 5,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--physics--kinematic_character_2d",
+      "title": "Kinematic character (2D)",
+      "source_path": "tutorials/physics/kinematic_character_2d.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/kinematic_character_2d.rst",
+      "source_path_or_url": "tutorials/physics/kinematic_character_2d.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--kinematic_character_2d"
+      ],
+      "char_count": 6722,
+      "heading_count": 6,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--physics--large_world_coordinates",
+      "title": "Large world coordinates",
+      "source_path": "tutorials/physics/large_world_coordinates.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/large_world_coordinates.rst",
+      "source_path_or_url": "tutorials/physics/large_world_coordinates.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--large_world_coordinates"
+      ],
+      "char_count": 10977,
+      "heading_count": 8,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--physics--physics_introduction",
+      "title": "Physics introduction",
+      "source_path": "tutorials/physics/physics_introduction.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/physics_introduction.rst",
+      "source_path_or_url": "tutorials/physics/physics_introduction.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--physics_introduction"
+      ],
+      "char_count": 17465,
+      "heading_count": 32,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--physics--ragdoll_system",
+      "title": "Ragdoll system",
+      "source_path": "tutorials/physics/ragdoll_system.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/physics/ragdoll_system.rst",
+      "source_path_or_url": "tutorials/physics/ragdoll_system.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--physics--ragdoll_system"
+      ],
+      "char_count": 8823,
+      "heading_count": 9,
+      "category": "tutorials",
+      "topic": "physics"
+    },
+    {
+      "source_id": "tutorials--scripting--change_scenes_manually",
+      "title": "Change scenes manually",
+      "source_path": "tutorials/scripting/change_scenes_manually.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/change_scenes_manually.rst",
+      "source_path_or_url": "tutorials/scripting/change_scenes_manually.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--change_scenes_manually"
+      ],
+      "char_count": 4890,
+      "heading_count": 3,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--scripting--creating_script_templates",
+      "title": "Creating script templates",
+      "source_path": "tutorials/scripting/creating_script_templates.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/creating_script_templates.rst",
+      "source_path_or_url": "tutorials/scripting/creating_script_templates.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--creating_script_templates"
+      ],
+      "char_count": 6913,
+      "heading_count": 17,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--scripting--cross_language_scripting",
+      "title": "Cross-language scripting",
+      "source_path": "tutorials/scripting/cross_language_scripting.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/cross_language_scripting.rst",
+      "source_path_or_url": "tutorials/scripting/cross_language_scripting.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--cross_language_scripting"
+      ],
+      "char_count": 6559,
+      "heading_count": 22,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--scripting--evaluating_expressions",
+      "title": "Evaluating expressions",
+      "source_path": "tutorials/scripting/evaluating_expressions.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/evaluating_expressions.rst",
+      "source_path_or_url": "tutorials/scripting/evaluating_expressions.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--evaluating_expressions"
+      ],
+      "char_count": 6557,
+      "heading_count": 14,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--scripting--filesystem",
+      "title": "File system",
+      "source_path": "tutorials/scripting/filesystem.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/filesystem.rst",
+      "source_path_or_url": "tutorials/scripting/filesystem.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--filesystem"
+      ],
+      "char_count": 4259,
+      "heading_count": 9,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--scripting--groups",
+      "title": "Groups",
+      "source_path": "tutorials/scripting/groups.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/scripting/groups.rst",
+      "source_path_or_url": "tutorials/scripting/groups.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--scripting--groups"
+      ],
+      "char_count": 3582,
+      "heading_count": 4,
+      "category": "tutorials",
+      "topic": "scripting"
+    },
+    {
+      "source_id": "tutorials--inputs--controller_features",
+      "title": "Controller features",
+      "source_path": "tutorials/inputs/controller_features.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/controller_features.rst",
+      "source_path_or_url": "tutorials/inputs/controller_features.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--controller_features"
+      ],
+      "char_count": 10249,
+      "heading_count": 8,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "tutorials--inputs--controllers_gamepads_joysticks",
+      "title": "Controllers, gamepads, and joysticks",
+      "source_path": "tutorials/inputs/controllers_gamepads_joysticks.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/controllers_gamepads_joysticks.rst",
+      "source_path_or_url": "tutorials/inputs/controllers_gamepads_joysticks.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--controllers_gamepads_joysticks"
+      ],
+      "char_count": 14175,
+      "heading_count": 26,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "tutorials--inputs--custom_mouse_cursor",
+      "title": "Customizing the mouse cursor",
+      "source_path": "tutorials/inputs/custom_mouse_cursor.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/custom_mouse_cursor.rst",
+      "source_path_or_url": "tutorials/inputs/custom_mouse_cursor.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--custom_mouse_cursor"
+      ],
+      "char_count": 2605,
+      "heading_count": 8,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "tutorials--inputs--handling_quit_requests",
+      "title": "Handling quit requests",
+      "source_path": "tutorials/inputs/handling_quit_requests.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/handling_quit_requests.rst",
+      "source_path_or_url": "tutorials/inputs/handling_quit_requests.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--handling_quit_requests"
+      ],
+      "char_count": 2872,
+      "heading_count": 5,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "tutorials--inputs--input_examples",
+      "title": "Input examples",
+      "source_path": "tutorials/inputs/input_examples.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/input_examples.rst",
+      "source_path_or_url": "tutorials/inputs/input_examples.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--input_examples"
+      ],
+      "char_count": 9892,
+      "heading_count": 16,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "tutorials--inputs--inputevent",
+      "title": "Using InputEvent",
+      "source_path": "tutorials/inputs/inputevent.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/tutorials/inputs/inputevent.rst",
+      "source_path_or_url": "tutorials/inputs/inputevent.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "tutorials--inputs--inputevent"
+      ],
+      "char_count": 9804,
+      "heading_count": 9,
+      "category": "tutorials",
+      "topic": "inputs"
+    },
+    {
+      "source_id": "getting_started--step_by_step--instancing",
+      "title": "Creating instances",
+      "source_path": "getting_started/step_by_step/instancing.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/instancing.rst",
+      "source_path_or_url": "getting_started/step_by_step/instancing.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--instancing"
+      ],
+      "char_count": 8591,
+      "heading_count": 5,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    },
+    {
+      "source_id": "getting_started--step_by_step--nodes_and_scenes",
+      "title": "Nodes and Scenes",
+      "source_path": "getting_started/step_by_step/nodes_and_scenes.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/nodes_and_scenes.rst",
+      "source_path_or_url": "getting_started/step_by_step/nodes_and_scenes.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--nodes_and_scenes"
+      ],
+      "char_count": 6305,
+      "heading_count": 7,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    },
+    {
+      "source_id": "getting_started--step_by_step--scripting_first_script",
+      "title": "Creating your first script",
+      "source_path": "getting_started/step_by_step/scripting_first_script.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/scripting_first_script.rst",
+      "source_path_or_url": "getting_started/step_by_step/scripting_first_script.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--scripting_first_script"
+      ],
+      "char_count": 9373,
+      "heading_count": 7,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    },
+    {
+      "source_id": "getting_started--step_by_step--scripting_languages",
+      "title": "Scripting languages",
+      "source_path": "getting_started/step_by_step/scripting_languages.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/scripting_languages.rst",
+      "source_path_or_url": "getting_started/step_by_step/scripting_languages.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--scripting_languages"
+      ],
+      "char_count": 5930,
+      "heading_count": 7,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    },
+    {
+      "source_id": "getting_started--step_by_step--scripting_player_input",
+      "title": "Listening to player input",
+      "source_path": "getting_started/step_by_step/scripting_player_input.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/scripting_player_input.rst",
+      "source_path_or_url": "getting_started/step_by_step/scripting_player_input.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--scripting_player_input"
+      ],
+      "char_count": 6037,
+      "heading_count": 4,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    },
+    {
+      "source_id": "getting_started--step_by_step--signals",
+      "title": "Using signals",
+      "source_path": "getting_started/step_by_step/signals.rst",
+      "source_url": "https://github.com/godotengine/godot-docs/blob/c5b3485cb4b6e14ae3d8a45271bcddac7caad66a/getting_started/step_by_step/signals.rst",
+      "source_path_or_url": "getting_started/step_by_step/signals.rst",
+      "license_or_permission": "CC BY 3.0 (godot-docs, trừ classes/); ghi công: Juan Linietsky, Ariel Manzur and the Godot community",
+      "accessed_at": "2026-11-13T10:25:00+00:00",
+      "page_ids": [
+        "getting_started--step_by_step--signals"
+      ],
+      "char_count": 13972,
+      "heading_count": 7,
+      "category": "getting_started",
+      "topic": "step_by_step"
+    }
+  ]
+}
