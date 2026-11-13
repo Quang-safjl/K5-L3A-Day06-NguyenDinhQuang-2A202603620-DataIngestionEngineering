@@ -3,8 +3,8 @@
 Chốt trước khi chạy `evaluate --split test`. Commit file này trước khi xem kết quả test.
 
 ## Thời điểm chốt
-- Thời điểm (UTC+7): 2026-11-13 18:50   <- sửa thành giờ thực tế lúc bạn lưu file
-- Commit hash lúc chốt: <điền sau khi commit, xem bước bên dưới>
+- Thời điểm (UTC+7): 2026-11-13 18:50   
+- Commit hash lúc chốt: 2026-11-13-19:00
 
 ## Cách chia dev/test
 - Chia theo tài liệu nguồn: 15 câu dev dùng 9 tài liệu gold, 5 câu test dùng 5 tài liệu gold khác. Không tài liệu gold nào xuất hiện ở cả hai tập.

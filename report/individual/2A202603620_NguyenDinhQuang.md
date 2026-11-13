@@ -28,9 +28,9 @@ Source@3: dev A 14/15, B 14/15, C 15/15; test cả ba 5/5. Riêng các câu có 
 
 | Strategy | Coherence trung bình /2 (n) | Metadata đủ và đúng (n/N) | Filter tuân thủ (n/N hoặc N/A) | Grounding 0/1/2 (số câu) và trung bình /2 |
 |---|---|---|---|---|
-| A | <<từ coherence_labels.csv>> | <<từ metadata_audit.csv>> | N/A | <<từ grounding_labels.csv>> |
-| B | <<>> | <<>> | N/A | <<>> |
-| C | <<>> (= B, cùng chunk) | <<>> | <<>> | <<>> |
+| A | 1,0 (n=10) | 15/15 | N/A (không áp filter; top-3 của q16, q17 đúng topic 6/6 do trùng) | 0/1/2 = 0/0/5; TB 2,0 |
+| B | 1,8 (n=10) | 12/15 | N/A (không áp filter; top-3 đúng topic 3/6) | 0/1/2 = 0/0/5; TB 2,0 |
+| C | 1,8 (= B, cùng chunk) | 15/15 | 6/6 | 0/1/2 = 0/0/5; TB 2,0 |
 
 Đường dẫn trace: `results/traces/trace_<A|B|C>_<dev|test>.jsonl`. Nhãn thủ công: `results/audit/*.csv`. Cách chọn mẫu: coherence lấy 10 đơn vị đầu theo thứ tự tên, vị trí giữa văn bản, dòng xáo thứ tự (seed 42); metadata và grounding chấm trên 5 câu test × top-3.
 

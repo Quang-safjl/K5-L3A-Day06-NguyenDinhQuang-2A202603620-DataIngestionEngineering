@@ -1,0 +1,741 @@
+question_id,strategy,question,expected_answer,gold_evidence,top3_text,score_0_1_2,reason,grader
+q16,A,Can a GDScript file inherit from a C# script?,"No. A GDScript file may not inherit from a C# script, and a C# script may not inherit from a GDScript file.","A GDScript file may not inherit from a C# script. Likewise, a C# script may not inherit from a GDScript file.","[rank 1 | A-tutorials--scripting--cross_language_scripting-014]
+e
+
+A GDScript file may not inherit from a C# script. Likewise, a C# script may not
+inherit from a GDScript file. Due to how complex this would be to implement,
+this limitation is unlikely to be lifted in the future. See
+this GitHub issue
+for more information.
+---
+[rank 2 | A-tutorials--scripting--cross_language_scripting-013]
+
+
+my_csharp_node.MySignalWithParams.connect(my_signal_with_params_handler)
+
+### Connecting to GDScript signals from C#
+
+Connecting to a GDScript signal from C# only works with the Connect method
+because no C# static types exist for signals defined by GDScript:
+
+myGDScriptNode.Connect(""my_signal"", Callable.From(MySignalHandler));
+
+myGDScriptNode.Connect(""my_signal_with_params"", Callable.From<string, int>(MySignalWithParamsHandler));
+
+## Inheritance
+
+A GDScript file may not inherit from a C# scrip
+---
+[rank 3 | A-tutorials--scripting--cross_language_scripting-005]
+ew` in base.
+
+For example, MyCoolNode.cs should contain a class named MyCoolNode.
+
+The C# class needs to derive a Godot class, for example GodotObject.
+Otherwise, the same error will occur.
+
+You also need to check your .cs file is referenced in the project's
+.csproj file. Otherwise, the same error will occur.
+
+### Instantiating GDScript nodes from C#
+
+From the C# side, everything work the same way. Once loaded, the GDScript can
+be instantiated with GDScript.New().
+
+var myGDScript = GD.Load<GDScr",2,Rank 1 nêu trực tiếp rằng GDScript không thể kế thừa C# và ngược lại; đủ căn cứ cho toàn bộ expected_answer.,author
+q17,A,"If I call SceneTree.quit directly, can my nodes still finish saving?",No. Quitting that way does not allow custom actions such as saving to complete; send the close-request notification yourself first.,"Quitting by calling SceneTree.quit will not allow custom actions to complete (such as saving, confirming the quit, or debugging), even if you try to delay the line that forces the quit.","[rank 1 | A-tutorials--inputs--handling_quit_requests-005]
+ saving, confirming the quit,
+or debugging), even if you try to delay the line that forces the quit.
+
+Instead, if you want to notify the nodes in the scene tree about the upcoming
+program termination, you should send the notification yourself:
+
+get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+
+GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
+
+Sending this notification will inform all nodes about the program termination,
+but will not terminate the progra
+---
+[rank 2 | A-tutorials--inputs--handling_quit_requests-006]
+ram termination,
+but will not terminate the program itself unlike in 3.X. In order to achieve
+the previous behavior, SceneTree.quit should
+be called after the notification.
+---
+[rank 3 | A-tutorials--inputs--handling_quit_requests-004]
+lication if
+Application > Config > Quit On Go Back is checked in the Project Settings
+(which is the default). This will fire NOTIFICATION_WM_GO_BACK_REQUEST.
+
+## Sending your own quit notification
+
+While forcing the application to close can be done by calling
+SceneTree.quit, doing so will not send
+the NOTIFICATION_WM_CLOSE_REQUEST to the nodes in the scene tree.
+Quitting by calling SceneTree.quit will
+not allow custom actions to complete (such as saving, confirming the quit,
+or debugging), even ",2,Rank 1 giải thích trực tiếp SceneTree.quit không gửi close-request notification và không cho custom actions như saving hoàn tất; đủ căn cứ cho câu trả lời.,author
+q18,A,Which kind of collision shape can only be used inside static bodies?,Concave (trimesh) shapes; they do not work with CharacterBody or RigidBody unless the RigidBody mode is Static.,You can only use concave shapes within StaticBodies. They will not work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.,"[rank 1 | A-tutorials--physics--collision_shapes_3d-007]
+n shapes, also called trimesh
+collision shapes, can take any form, from a few triangles to thousands of
+triangles. Concave shapes are the slowest option but are also the most accurate
+in Godot. You can only use concave shapes within StaticBodies. They will not
+work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.
+
+Note: Even though concave shapes offer the most accurate collision, contact
+reporting can be less precise than primitive shapes.
+
+When not using GridMaps for 
+---
+[rank 2 | A-tutorials--physics--collision_shapes_3d-011]
+ects like RigidBodies and
+CharacterBodies. On top of that, avoid translating, rotating, or scaling
+CollisionShapes to benefit from the physics engine's internal optimizations.
+
+When using a single non-transformed collision shape in a StaticBody, the
+engine's broad phase algorithm can discard inactive PhysicsBodies. The *narrow
+phase* will then only have to take into account the active bodies' shapes. If a
+StaticBody has many collision shapes, the broad phase will fail. The narrow
+phase, which is
+---
+[rank 3 | A-tutorials--physics--collision_shapes_2d-012]
+
+
+## Performance caveats
+
+You aren't limited to a single collision shape per PhysicsBody. Still, we
+recommend keeping the number of shapes as low as possible to improve
+performance, especially for dynamic objects like RigidBodies and
+CharacterBodies. On top of that, avoid translating, rotating, or scaling
+CollisionShapes to benefit from the physics engine's internal optimizations.
+
+When using a single non-transformed collision shape in a StaticBody, the
+engine's broad phase algorithm can discard",2,"Rank 1 nêu rõ concave/trimesh chỉ dùng trong StaticBodies, không dùng với CharacterBody hoặc RigidBody trừ khi RigidBody ở chế độ Static.",author
+q19,A,Why would an asset referenced with the wrong letter case work on Windows but break on Linux?,"Windows and macOS file names are case insensitive, but other platforms such as Linux and Android are case sensitive.","If a developer working in a case insensitive host file system saves an asset as myfile.PNG, but then references it as myfile.png, it will work fine on their platform, but not on other platforms, such as Linux, Android, etc.","[rank 1 | A-tutorials--scripting--filesystem-008]
+dot detects this and helps you fix them anyway, but why
+go the hard route?).
+
+The second is that, under Windows and macOS, file and path names are case insensitive.
+If a developer working in a case insensitive host file system saves an asset as myfile.PNG,
+but then references it as myfile.png, it will work fine on their platform, but not
+on other platforms, such as Linux, Android, etc. This may also apply to exported binaries,
+which use a compressed package to store all files.
+
+It is recommended
+---
+[rank 2 | A-tutorials--scripting--filesystem-006]
+t file system paths can also be used, but this is not recommended
+for a released product as these paths are not guaranteed to work on all platforms.
+However, using host file system paths can be useful when writing development
+tools in Godot.
+
+## Drawbacks
+
+There are some drawbacks to this file system design. The first issue is that
+moving assets around (renaming them or moving them from one path to another inside
+the project) will break existing references to these assets. These references will
+
+---
+[rank 3 | A-tutorials--scripting--filesystem-007]
+references to these assets. These references will
+have to be re-defined to point at the new asset location.
+
+To avoid this, do all your move, delete and rename operations from within Godot, on
+the FileSystem dock. When you delete files in Godot, it will prompt you with a confirmation dialog
+listing all selected files and any scenes that depend on those files.
+Never move assets from outside Godot, or dependencies will have
+to be fixed manually (Godot detects this and helps you fix them anyway, bu",2,"Rank 1 nêu trực tiếp Windows/macOS không phân biệt chữ hoa-thường, còn Linux/Android có phân biệt; khớp expected_answer.",author
+q20,A,How can I reduce textures flickering back and forth in the distance in a 3D scene?,Increase the Camera node's Near property (and decrease Far to the lowest permissible value).,"To make the depth buffer more precise over the rendered area, you should increase the Camera node's Near property.","[rank 1 | A-tutorials--3d--3d_rendering_limitations-006]
+. If two
+different objects end up on the same buffer value, then Z-fighting will occur.
+This will materialize as textures flickering back and forth as the camera moves
+or rotates.
+
+To make the depth buffer more precise over the rendered area, you should
+increase the Camera node's Near property. However, be careful: if you set
+it too high, players will be able to see through nearby geometry. You should
+also decrease the Camera node's Far property to the lowest permissible value
+for your use case,
+---
+[rank 2 | A-tutorials--3d--3d_antialiasing-001]
+he vegetation is also flickering in and out,
+and thin lines on top of the box have almost disappeared:
+
+To combat this, various antialiasing techniques can be used in Godot. These are
+detailed below.
+
+Antialiasing can be configured from the Project Settings window or
+changed from code using the runtime properties of the class_Viewport class, such as
+msaa_3d,
+screen_space_aa, and
+use_taa. The available values for these properties
+are defined in the MSAA and
+ScreenSpaceAA enums.
+
+Seealso: You can 
+---
+[rank 3 | A-tutorials--3d--environment_and_post_processing-046]
+ use when computing screen-space
+ambient occlusion. A higher number will result in a smoother look, but will be
+slower to compute and will have less high-frequency detail.
+- Fadeout From: Distance at which the screen-space ambient occlusion effect
+starts to fade out. Use this hide ambient occlusion from far away.
+- Fadeout To: Distance at which the screen-space ambient occlusion is fully
+faded out. Use this hide ambient occlusion from far away.
+
+Note: Since Godot 4.6, a simplified version of SSA",2,"Rank 1 giải thích Z-fighting gây flicker và khuyến nghị tăng Camera Near, giảm Far đến mức thấp nhất phù hợp; khớp expected_answer.",author
+q16,B,Can a GDScript file inherit from a C# script?,"No. A GDScript file may not inherit from a C# script, and a C# script may not inherit from a GDScript file.","A GDScript file may not inherit from a C# script. Likewise, a C# script may not inherit from a GDScript file.","[rank 1 | B-tutorials--scripting--cross_language_scripting-010]
+## Inheritance
+
+A GDScript file may not inherit from a C# script. Likewise, a C# script may not
+inherit from a GDScript file. Due to how complex this would be to implement,
+this limitation is unlikely to be lifted in the future. See
+this GitHub issue
+for more information.
+---
+[rank 2 | B-tutorials--scripting--cross_language_scripting-003]
+### Instantiating GDScript nodes from C#
+
+From the C# side, everything work the same way. Once loaded, the GDScript can
+be instantiated with GDScript.New().
+
+var myGDScript = GD.Load<GDScript>(""res://path/to/my_gd_script.gd"");
+var myGDScriptNode = (GodotObject)myGDScript.New(); // This is a GodotObject.
+
+Here we are using an class_Object, but you can use type conversion like
+explained in doc_c_sharp_features_type_conversion_and_casting.
+---
+[rank 3 | B-getting_started--step_by_step--scripting_first_script-002]
+## Creating a new script
+
+To create and attach a new script to our node, right-click on Sprite2D in the
+Scene dock and select Attach Script.
+
+The Attach Node Script window appears. It allows you to select the script's
+language and file path, among other options.
+
+Change the Template field from Node: Default to Object: Empty to
+start with a clean file. Leave the other options set to their default values and
+click the Create button to create the script.
+
+Note: C# script names need to match their class name. In this case, you should name the
+file MySprite2D.cs.
+
+The Script workspace should appear with your new sprite_2d.gd file open and
+the following line of code:
+
+extends Sprite2D
+
+using Godot;
+using System;
+
+public partial class MySprite2D : Sprite2D
+{
+}
+
+Every GDScript file is implicitly a class. The extends keyword defines the
+class this script inherits or extends. In this case, it's Sprite2D, meaning
+our script will get access to all the properties and functions of the Sprite2D
+node, including classes it extends, like Node2D, CanvasItem, and
+Node.",2,Rank 1 nêu trực tiếp rằng GDScript không thể kế thừa C# và ngược lại; đủ căn cứ cho toàn bộ expected_answer.,author
+q17,B,"If I call SceneTree.quit directly, can my nodes still finish saving?",No. Quitting that way does not allow custom actions such as saving to complete; send the close-request notification yourself first.,"Quitting by calling SceneTree.quit will not allow custom actions to complete (such as saving, confirming the quit, or debugging), even if you try to delay the line that forces the quit.","[rank 1 | B-tutorials--inputs--handling_quit_requests-003]
+## Sending your own quit notification
+
+While forcing the application to close can be done by calling
+SceneTree.quit, doing so will not send
+the NOTIFICATION_WM_CLOSE_REQUEST to the nodes in the scene tree.
+Quitting by calling SceneTree.quit will
+not allow custom actions to complete (such as saving, confirming the quit,
+or debugging), even if you try to delay the line that forces the quit.
+
+Instead, if you want to notify the nodes in the scene tree about the upcoming
+program termination, you should send the notification yourself:
+
+get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+
+GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
+
+Sending this notification will inform all nodes about the program termination,
+but will not terminate the program itself unlike in 3.X. In order to achieve
+the previous behavior, SceneTree.quit should
+be called after the notification.
+---
+[rank 2 | B-tutorials--scripting--groups-005]
+### Using code
+
+The SceneTree class provides many more useful methods
+to interact with scenes, their node hierarchy, and groups. It allows you to
+switch scenes easily or reload them, quit the game or pause and unpause it. It
+also provides useful signals.
+---
+[rank 3 | B-tutorials--scripting--change_scenes_manually-001]
+# Change scenes manually
+
+To complete the cycle and swap out the new scene with the old one,
+you have a choice to make. Many strategies exist for removing a scene
+from view of the Viewport. The tradeoffs involve
+balancing operation speed and memory consumption, as well as balancing data
+access and integrity.
+
+1. Delete the existing scene.
+SceneTree.change_scene_to_file() and
+SceneTree.change_scene_to_packed()
+will delete the current scene immediately. You can also delete the
+main scene. Assuming the root node's name is ""Main"", you could do
+get_node(""/root/Main"").free() to delete the whole scene.
+
+- Unloads memory.
+
+- Pro: RAM is no longer dragging the dead weight.
+
+- Con: Returning to that scene is now more expensive since it must be
+loaded back into memory again (takes time AND memory). Not a problem
+if returning soon is unnecessary.
+
+- Con: No longer have access to that scene's data. Not a problem if
+using that data soon is unnecessary.
+
+- Note: It can be useful to preserve the data in a soon-to-be-deleted
+scene by re-attaching one or more of its nodes to a different scene,
+or even directly to the SceneTree.
+
+- Processing stops.",2,Rank 1 giải thích trực tiếp SceneTree.quit không gửi close-request notification và không cho custom actions như saving hoàn tất; đủ căn cứ cho câu trả lời.,author
+q18,B,Which kind of collision shape can only be used inside static bodies?,Concave (trimesh) shapes; they do not work with CharacterBody or RigidBody unless the RigidBody mode is Static.,You can only use concave shapes within StaticBodies. They will not work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.,"[rank 1 | B-tutorials--physics--collision_shapes_3d-004]
+## Concave or trimesh collision shapes
+
+Concave collision shapes, also called trimesh
+collision shapes, can take any form, from a few triangles to thousands of
+triangles. Concave shapes are the slowest option but are also the most accurate
+in Godot. You can only use concave shapes within StaticBodies. They will not
+work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.
+
+Note: Even though concave shapes offer the most accurate collision, contact
+reporting can be less precise than primitive shapes.
+
+When not using GridMaps for level design, concave shapes are the best approach
+for a level's collision. That said, if your level has small details, you may
+want to exclude those from collision for performance and game feel. To do so,
+you can build a simplified collision mesh in a 3D modeler and have Godot
+generate a collision shape for it automatically. More on that below.
+
+Note that unlike primitive and convex shapes, a concave collision shape doesn't
+have an actual ""volume"". You can place objects both outside of the shape as
+well as inside.
+---
+[rank 2 | B-tutorials--physics--collision_shapes_2d-003]
+## Concave or trimesh collision shapes
+
+Concave collision shapes, also called trimesh
+collision shapes, can take any form, from a few triangles to thousands of
+triangles. Concave shapes are the slowest option but are also the most accurate
+in Godot. You can only use concave shapes within StaticBodies. They will not
+work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.
+
+Note: Even though concave shapes offer the most accurate collision, contact
+reporting can be less precise than primitive shapes.
+
+When not using TileMaps for level design, concave shapes are the best approach
+for a level's collision.
+
+You can configure the CollisionPolygon2D node's build mode in the inspector.
+If it is set to Solids (the default), collisions will include the polygon
+and its contained area. If it is set to Segments, collisions will only
+include the polygon edges.
+---
+[rank 3 | B-tutorials--physics--collision_shapes_3d-000]
+# Collision shapes (3D)
+
+This guide explains:
+
+- The types of collision shapes available in 3D in Godot.
+- Using a convex or a concave mesh as a collision shape.
+- Performance considerations regarding 3D collisions.
+
+Godot provides many kinds of collision shapes, with different performance and
+accuracy tradeoffs.
+
+You can define the shape of a class_PhysicsBody3D by adding one or more
+CollisionShape3Ds as direct child nodes.
+Indirect child nodes (i.e. children of child nodes) will be ignored and won't be
+used as collision shapes. Also, note that you must add a class_Shape3D
+resource to collision shape nodes in the Inspector dock.
+
+Note: When you add multiple collision shapes to a single PhysicsBody, you don't
+have to worry about them overlapping. They won't ""collide"" with each other.",2,"Rank 1 nêu rõ concave/trimesh chỉ dùng trong StaticBodies, không dùng với CharacterBody hoặc RigidBody trừ khi RigidBody ở chế độ Static.",author
+q19,B,Why would an asset referenced with the wrong letter case work on Windows but break on Linux?,"Windows and macOS file names are case insensitive, but other platforms such as Linux and Android are case sensitive.","If a developer working in a case insensitive host file system saves an asset as myfile.PNG, but then references it as myfile.png, it will work fine on their platform, but not on other platforms, such as Linux, Android, etc.","[rank 1 | B-tutorials--scripting--filesystem-007]
+## Drawbacks
+
+There are some drawbacks to this file system design. The first issue is that
+moving assets around (renaming them or moving them from one path to another inside
+the project) will break existing references to these assets. These references will
+have to be re-defined to point at the new asset location.
+
+To avoid this, do all your move, delete and rename operations from within Godot, on
+the FileSystem dock. When you delete files in Godot, it will prompt you with a confirmation dialog
+listing all selected files and any scenes that depend on those files.
+Never move assets from outside Godot, or dependencies will have
+to be fixed manually (Godot detects this and helps you fix them anyway, but why
+go the hard route?).
+
+The second is that, under Windows and macOS, file and path names are case insensitive.
+If a developer working in a case insensitive host file system saves an asset as myfile.PNG,
+but then references it as myfile.png, it will work fine on their platform, but not
+on other platforms, such as Linux, Android, etc. This may also apply to exported binaries,
+which use a compressed package to store all files.
+---
+[rank 2 | B-tutorials--scripting--filesystem-005]
+## User path
+
+Writing to disk is still needed for tasks such as saving game state or
+downloading content packs. To this end, the engine ensures that there is a
+special path user:// that is always writable. This path resolves
+differently depending on the OS the project is running on. Local path
+resolution is further explained in doc_data_paths.
+---
+[rank 3 | B-tutorials--scripting--filesystem-008]
+## Drawbacks
+
+It is recommended that your team clearly define a naming convention for files when
+working with Godot. One fool-proof convention is to only allow lowercase
+file and path names.",2,"Rank 1 nêu trực tiếp Windows/macOS không phân biệt chữ hoa-thường, còn Linux/Android có phân biệt; khớp expected_answer.",author
+q20,B,How can I reduce textures flickering back and forth in the distance in a 3D scene?,Increase the Camera node's Near property (and decrease Far to the lowest permissible value).,"To make the depth buffer more precise over the rendered area, you should increase the Camera node's Near property.","[rank 1 | B-tutorials--3d--3d_rendering_limitations-004]
+## Depth buffer precision
+
+To sort objects in 3D space, rendering engines rely on a depth buffer (also
+called Z-buffer). This buffer has a finite precision: 32-bit on desktop
+platforms, 24-bit on mobile platforms (for performance reasons). If two
+different objects end up on the same buffer value, then Z-fighting will occur.
+This will materialize as textures flickering back and forth as the camera moves
+or rotates.
+
+To make the depth buffer more precise over the rendered area, you should
+increase the Camera node's Near property. However, be careful: if you set
+it too high, players will be able to see through nearby geometry. You should
+also decrease the Camera node's Far property to the lowest permissible value
+for your use case, though keep in mind it won't impact precision as much as the
+Near property.
+
+If you only need high precision when the player can see far away, you could
+change it dynamically based on the game conditions. For instance, if the player
+enters an airplane, the Near property can be temporarily increased to avoid
+Z-fighting in the distance. It can then be decreased once the player leaves the
+airplane.
+---
+[rank 2 | B-tutorials--3d--3d_antialiasing-000]
+# 3D antialiasing
+
+Seealso: Godot also supports antialiasing in 2D rendering. This is covered on the
+
+## Introduction
+
+Due to their limited resolution, scenes rendered in 3D can exhibit aliasing
+artifacts. These artifacts commonly manifest as a ""staircase"" effect on surface
+edges (edge aliasing) and as flickering and/or sparkles on reflective surfaces
+(specular aliasing).
+
+In the example below, you can notice how
+edges have a blocky appearance. The vegetation is also flickering in and out,
+and thin lines on top of the box have almost disappeared:
+
+To combat this, various antialiasing techniques can be used in Godot. These are
+detailed below.
+
+Antialiasing can be configured from the Project Settings window or
+changed from code using the runtime properties of the class_Viewport class, such as
+msaa_3d,
+screen_space_aa, and
+use_taa. The available values for these properties
+are defined in the MSAA and
+ScreenSpaceAA enums.
+
+Seealso: You can compare antialiasing algorithms in action using the
+3D Antialiasing demo project.
+---
+[rank 3 | B-tutorials--3d--environment_and_post_processing-019]
+## Mid- and post-processing effects
+
+The Environment resource supports many popular mid- and post-processing effects.
+
+Note: Screen-space effects such as SSR (Screen-Space Reflections),
+geometry that is located outside the camera view or is occluded by other
+opaque geometry. Consider this when tweaking their settings to avoid
+distracting changes during gameplay.",2,"Rank 1 giải thích Z-fighting gây flicker và khuyến nghị tăng Camera Near, giảm Far đến mức thấp nhất phù hợp; khớp expected_answer.",author
+q16,C,Can a GDScript file inherit from a C# script?,"No. A GDScript file may not inherit from a C# script, and a C# script may not inherit from a GDScript file.","A GDScript file may not inherit from a C# script. Likewise, a C# script may not inherit from a GDScript file.","[rank 1 | B-tutorials--scripting--cross_language_scripting-010]
+## Inheritance
+
+A GDScript file may not inherit from a C# script. Likewise, a C# script may not
+inherit from a GDScript file. Due to how complex this would be to implement,
+this limitation is unlikely to be lifted in the future. See
+this GitHub issue
+for more information.
+---
+[rank 2 | B-tutorials--scripting--cross_language_scripting-003]
+### Instantiating GDScript nodes from C#
+
+From the C# side, everything work the same way. Once loaded, the GDScript can
+be instantiated with GDScript.New().
+
+var myGDScript = GD.Load<GDScript>(""res://path/to/my_gd_script.gd"");
+var myGDScriptNode = (GodotObject)myGDScript.New(); // This is a GodotObject.
+
+Here we are using an class_Object, but you can use type conversion like
+explained in doc_c_sharp_features_type_conversion_and_casting.
+---
+[rank 3 | B-tutorials--scripting--creating_script_templates-005]
+## Default behavior and overriding it
+
+Note: The script templates have the same extension as the regular script
+files. This may lead to an issue of a script parser treating those templates as
+actual scripts within a project. To avoid this, make sure to ignore the
+directory containing them by creating an empty .gdignore file. The directory won't be
+visible throughout the project's filesystem anymore, yet the templates can be
+modified by an external text editor anytime.
+
+Tip: By default, every C# file inside the project directory is included in the compilation.
+Script templates must be manually excluded from the C# project to avoid build errors.
+See Exclude files from the build in the Microsoft documentation.
+
+It is possible to create editor-level templates that have the same level as a project-specific
+templates, and also that have the same name as a built-in one, all will be shown on the new script
+dialog.",2,Rank 1 nêu trực tiếp rằng GDScript không thể kế thừa C# và ngược lại; đủ căn cứ cho toàn bộ expected_answer.,author
+q17,C,"If I call SceneTree.quit directly, can my nodes still finish saving?",No. Quitting that way does not allow custom actions such as saving to complete; send the close-request notification yourself first.,"Quitting by calling SceneTree.quit will not allow custom actions to complete (such as saving, confirming the quit, or debugging), even if you try to delay the line that forces the quit.","[rank 1 | B-tutorials--inputs--handling_quit_requests-003]
+## Sending your own quit notification
+
+While forcing the application to close can be done by calling
+SceneTree.quit, doing so will not send
+the NOTIFICATION_WM_CLOSE_REQUEST to the nodes in the scene tree.
+Quitting by calling SceneTree.quit will
+not allow custom actions to complete (such as saving, confirming the quit,
+or debugging), even if you try to delay the line that forces the quit.
+
+Instead, if you want to notify the nodes in the scene tree about the upcoming
+program termination, you should send the notification yourself:
+
+get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+
+GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
+
+Sending this notification will inform all nodes about the program termination,
+but will not terminate the program itself unlike in 3.X. In order to achieve
+the previous behavior, SceneTree.quit should
+be called after the notification.
+---
+[rank 2 | B-tutorials--inputs--handling_quit_requests-001]
+## Handling the notification
+
+On desktop and web platforms, Node receives a special
+NOTIFICATION_WM_CLOSE_REQUEST notification when quitting is requested from
+the window manager.
+
+Handling the notification is done as follows (on any node):
+
+func _notification(what):
+if what == NOTIFICATION_WM_CLOSE_REQUEST:
+get_tree().quit() # default behavior
+
+public override void _Notification(int what)
+{
+if (what == NotificationWMCloseRequest)
+{
+GetTree().Quit(); // default behavior
+}
+}
+
+It is important to note that by default, Godot apps have the built-in
+behavior to quit when quit is requested from the window manager. This
+can be changed, so that the user can take care of the complete quitting
+procedure:
+
+get_tree().set_auto_accept_quit(false)
+
+GetTree().AutoAcceptQuit = false;
+---
+[rank 3 | B-tutorials--inputs--inputevent-000]
+# Using InputEvent
+
+## What is it?
+
+Managing input is usually complex, no matter the OS or platform. To ease
+this a little, a special built-in type is provided, InputEvent.
+This datatype can be configured to contain several types of input
+events. Input events travel through the engine and can be received in
+multiple locations, depending on the purpose.
+
+Here is a quick example, closing your game if the escape key is hit:
+
+func _unhandled_input(event):
+if event is InputEventKey:
+if event.pressed and event.keycode == KEY_ESCAPE:
+get_tree().quit()
+
+public override void _UnhandledInput(InputEvent @event)
+{
+if (@event is InputEventKey eventKey)
+{
+if (eventKey.Pressed && eventKey.Keycode == Key.Escape)
+{
+GetTree().Quit();
+}
+}
+}",2,Rank 1 giải thích trực tiếp SceneTree.quit không gửi close-request notification và không cho custom actions như saving hoàn tất; đủ căn cứ cho câu trả lời.,author
+q18,C,Which kind of collision shape can only be used inside static bodies?,Concave (trimesh) shapes; they do not work with CharacterBody or RigidBody unless the RigidBody mode is Static.,You can only use concave shapes within StaticBodies. They will not work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.,"[rank 1 | B-tutorials--physics--collision_shapes_3d-004]
+## Concave or trimesh collision shapes
+
+Concave collision shapes, also called trimesh
+collision shapes, can take any form, from a few triangles to thousands of
+triangles. Concave shapes are the slowest option but are also the most accurate
+in Godot. You can only use concave shapes within StaticBodies. They will not
+work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.
+
+Note: Even though concave shapes offer the most accurate collision, contact
+reporting can be less precise than primitive shapes.
+
+When not using GridMaps for level design, concave shapes are the best approach
+for a level's collision. That said, if your level has small details, you may
+want to exclude those from collision for performance and game feel. To do so,
+you can build a simplified collision mesh in a 3D modeler and have Godot
+generate a collision shape for it automatically. More on that below.
+
+Note that unlike primitive and convex shapes, a concave collision shape doesn't
+have an actual ""volume"". You can place objects both outside of the shape as
+well as inside.
+---
+[rank 2 | B-tutorials--physics--collision_shapes_2d-003]
+## Concave or trimesh collision shapes
+
+Concave collision shapes, also called trimesh
+collision shapes, can take any form, from a few triangles to thousands of
+triangles. Concave shapes are the slowest option but are also the most accurate
+in Godot. You can only use concave shapes within StaticBodies. They will not
+work with CharacterBodies or RigidBodies unless the RigidBody's mode is Static.
+
+Note: Even though concave shapes offer the most accurate collision, contact
+reporting can be less precise than primitive shapes.
+
+When not using TileMaps for level design, concave shapes are the best approach
+for a level's collision.
+
+You can configure the CollisionPolygon2D node's build mode in the inspector.
+If it is set to Solids (the default), collisions will include the polygon
+and its contained area. If it is set to Segments, collisions will only
+include the polygon edges.
+---
+[rank 3 | B-tutorials--physics--collision_shapes_3d-000]
+# Collision shapes (3D)
+
+This guide explains:
+
+- The types of collision shapes available in 3D in Godot.
+- Using a convex or a concave mesh as a collision shape.
+- Performance considerations regarding 3D collisions.
+
+Godot provides many kinds of collision shapes, with different performance and
+accuracy tradeoffs.
+
+You can define the shape of a class_PhysicsBody3D by adding one or more
+CollisionShape3Ds as direct child nodes.
+Indirect child nodes (i.e. children of child nodes) will be ignored and won't be
+used as collision shapes. Also, note that you must add a class_Shape3D
+resource to collision shape nodes in the Inspector dock.
+
+Note: When you add multiple collision shapes to a single PhysicsBody, you don't
+have to worry about them overlapping. They won't ""collide"" with each other.",2,"Rank 1 nêu rõ concave/trimesh chỉ dùng trong StaticBodies, không dùng với CharacterBody hoặc RigidBody trừ khi RigidBody ở chế độ Static.",author
+q19,C,Why would an asset referenced with the wrong letter case work on Windows but break on Linux?,"Windows and macOS file names are case insensitive, but other platforms such as Linux and Android are case sensitive.","If a developer working in a case insensitive host file system saves an asset as myfile.PNG, but then references it as myfile.png, it will work fine on their platform, but not on other platforms, such as Linux, Android, etc.","[rank 1 | B-tutorials--scripting--filesystem-007]
+## Drawbacks
+
+There are some drawbacks to this file system design. The first issue is that
+moving assets around (renaming them or moving them from one path to another inside
+the project) will break existing references to these assets. These references will
+have to be re-defined to point at the new asset location.
+
+To avoid this, do all your move, delete and rename operations from within Godot, on
+the FileSystem dock. When you delete files in Godot, it will prompt you with a confirmation dialog
+listing all selected files and any scenes that depend on those files.
+Never move assets from outside Godot, or dependencies will have
+to be fixed manually (Godot detects this and helps you fix them anyway, but why
+go the hard route?).
+
+The second is that, under Windows and macOS, file and path names are case insensitive.
+If a developer working in a case insensitive host file system saves an asset as myfile.PNG,
+but then references it as myfile.png, it will work fine on their platform, but not
+on other platforms, such as Linux, Android, etc. This may also apply to exported binaries,
+which use a compressed package to store all files.
+---
+[rank 2 | B-tutorials--scripting--filesystem-005]
+## User path
+
+Writing to disk is still needed for tasks such as saving game state or
+downloading content packs. To this end, the engine ensures that there is a
+special path user:// that is always writable. This path resolves
+differently depending on the OS the project is running on. Local path
+resolution is further explained in doc_data_paths.
+---
+[rank 3 | B-tutorials--scripting--filesystem-008]
+## Drawbacks
+
+It is recommended that your team clearly define a naming convention for files when
+working with Godot. One fool-proof convention is to only allow lowercase
+file and path names.",2,"Rank 1 nêu trực tiếp Windows/macOS không phân biệt chữ hoa-thường, còn Linux/Android có phân biệt; khớp expected_answer.",author
+q20,C,How can I reduce textures flickering back and forth in the distance in a 3D scene?,Increase the Camera node's Near property (and decrease Far to the lowest permissible value).,"To make the depth buffer more precise over the rendered area, you should increase the Camera node's Near property.","[rank 1 | B-tutorials--3d--3d_rendering_limitations-004]
+## Depth buffer precision
+
+To sort objects in 3D space, rendering engines rely on a depth buffer (also
+called Z-buffer). This buffer has a finite precision: 32-bit on desktop
+platforms, 24-bit on mobile platforms (for performance reasons). If two
+different objects end up on the same buffer value, then Z-fighting will occur.
+This will materialize as textures flickering back and forth as the camera moves
+or rotates.
+
+To make the depth buffer more precise over the rendered area, you should
+increase the Camera node's Near property. However, be careful: if you set
+it too high, players will be able to see through nearby geometry. You should
+also decrease the Camera node's Far property to the lowest permissible value
+for your use case, though keep in mind it won't impact precision as much as the
+Near property.
+
+If you only need high precision when the player can see far away, you could
+change it dynamically based on the game conditions. For instance, if the player
+enters an airplane, the Near property can be temporarily increased to avoid
+Z-fighting in the distance. It can then be decreased once the player leaves the
+airplane.
+---
+[rank 2 | B-tutorials--3d--3d_antialiasing-000]
+# 3D antialiasing
+
+Seealso: Godot also supports antialiasing in 2D rendering. This is covered on the
+
+## Introduction
+
+Due to their limited resolution, scenes rendered in 3D can exhibit aliasing
+artifacts. These artifacts commonly manifest as a ""staircase"" effect on surface
+edges (edge aliasing) and as flickering and/or sparkles on reflective surfaces
+(specular aliasing).
+
+In the example below, you can notice how
+edges have a blocky appearance. The vegetation is also flickering in and out,
+and thin lines on top of the box have almost disappeared:
+
+To combat this, various antialiasing techniques can be used in Godot. These are
+detailed below.
+
+Antialiasing can be configured from the Project Settings window or
+changed from code using the runtime properties of the class_Viewport class, such as
+msaa_3d,
+screen_space_aa, and
+use_taa. The available values for these properties
+are defined in the MSAA and
+ScreenSpaceAA enums.
+
+Seealso: You can compare antialiasing algorithms in action using the
+3D Antialiasing demo project.
+---
+[rank 3 | B-tutorials--3d--environment_and_post_processing-019]
+## Mid- and post-processing effects
+
+The Environment resource supports many popular mid- and post-processing effects.
+
+Note: Screen-space effects such as SSR (Screen-Space Reflections),
+geometry that is located outside the camera view or is occluded by other
+opaque geometry. Consider this when tweaking their settings to avoid
+distracting changes during gameplay.",2,"Rank 1 giải thích Z-fighting gây flicker và khuyến nghị tăng Camera Near, giảm Far đến mức thấp nhất phù hợp; khớp expected_answer.",author
