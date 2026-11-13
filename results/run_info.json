@@ -1,0 +1,32 @@
+{
+  "run_at": "2026-11-13T10:45:37+00:00",
+  "python": "3.13.2",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "libs": {
+    "chromadb": "1.5.9",
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "transformers": "5.22.2"
+  },
+  "embedder": {
+    "model": "google/embeddinggemma-2",
+    "dimensions": 768,
+    "normalize": "L2",
+    "query_prompt": "task: search result | query: ",
+    "document_prompt": "title: none | text: ",
+    "sentence_transformers": "6.3.0"
+  },
+  "vector_store": {
+    "name": "Chroma PersistentClient",
+    "path": "D:\\Vin-AI\\K5-L3-Day06-NguyenDinhQuang-2A202603620-DataIngestionEngineering\\data\\chroma",
+    "metric": "cosine",
+    "search": "HNSW (approximate)",
+    "space_reported_by_chroma": {
+      "godot_A": "{'hnsw': {'space': 'cosine', 'ef_construction': 100, 'ef_search': 100, 'max_neighbors': 16, 'resize_factor': 1.2, 'sync_threshold': 1000}, 'spann': None, 'embedding_function': {'type': 'known', 'name': 'default', 'config': {}}}",
+      "godot_B": "{'hnsw': {'space': 'cosine', 'ef_construction': 100, 'ef_search': 100, 'max_neighbors': 16, 'resize_factor': 1.2, 'sync_threshold': 1000}, 'spann': None, 'embedding_function': {'type': 'known', 'name': 'default', 'config': {}}}"
+    }
+  },
+  "cost_usd": 0,
+  "seed": "không áp dụng (pipeline xác định)"
+}
